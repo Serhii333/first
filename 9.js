@@ -77,23 +77,23 @@ function toMatrix (data, rowSize) {
 	var result = [];
 	var chunk = instance.getNext();
 	while(chunk.length>0){
-			result.push(chunk);
-			chunk = instance.getNext();
+		result.push(chunk);
+		chunk = instance.getNext();
 	}
 	return result;
 	function iterator(arr, n){
-				var current = 0;
-        this.arr = arr;
-        this.n = n;
-				this.getNext = function(){
+		var current = 0;
+        	this.arr = arr;
+        	this.n = n;
+		this.getNext = function(){
 
-	        var end = current + this.n;
+	           var end = current + this.n;
 
-	        var chunk = this.arr.slice(current, end);
+	           var chunk = this.arr.slice(current, end);
 	           current = end;
 	           return chunk;
 
-				}
+		}
 
 	}
 }
